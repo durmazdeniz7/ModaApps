@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:moda_apps/widgets/my_body.dart';
+import 'package:moda_apps/pages/my_body.dart';
+import 'package:moda_apps/widgets/bottom_nav.dart';
+
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -13,6 +15,7 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: BottomNav(),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,

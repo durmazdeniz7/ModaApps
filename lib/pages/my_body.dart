@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:moda_apps/constant/text.dart';
+import 'package:moda_apps/widgets/body_item.dart';
+import 'package:moda_apps/widgets/button_item.dart';
+import 'package:moda_apps/widgets/tag_item.dart';
+import 'package:moda_apps/widgets/top_item.dart';
+
 
 class MyBody extends StatelessWidget {
   const MyBody({Key? key}) : super(key: key);
@@ -16,39 +21,35 @@ class MyBody extends StatelessWidget {
           child: Material(
             elevation: 4,
             borderRadius: BorderRadius.circular(16),
-            color: Colors.blue.shade300,
+            // color: Colors.blue.shade300,
             child: Container(
               padding: const EdgeInsets.all(16),
-              height: 450,
+              height: 500,
               width: double.infinity,
               child: Column(
                 children: [
-                  Row(
-                    children: [
-                      Container(
-                        width: 50,
-                        height: 50,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          image: const DecorationImage(image: AssetImage("assets/images/model1.jpeg"),fit: BoxFit.cover)
-                        ),
-                      ),
-                     const SizedBox(width: 10,),
-                     SizedBox(
-                        width: MediaQuery.of(context).size.width-172,
-                       child: Column(
-                         crossAxisAlignment: CrossAxisAlignment.start,
-                         
-                         children: [
-                         Text("Daily",style: GoogleFonts.montserrat(fontSize: 12,fontWeight: FontWeight.bold),),
-                         Text("34 minns ago",style: GoogleFonts.montserrat(fontSize: 10,color: Colors.grey ),)
-                       ],),
-                     ),
-                     IconButton(onPressed: (){}, icon: const Icon(Icons.more_vert,color: Colors.grey,))
-                    ],
+                  const TopItem(),
+                  const SizedBox(
+                    height: 15,
                   ),
-                  const SizedBox(height: 15,),
-                   Text(TextHelp.tex,style: GoogleFonts.montserrat(fontSize: 13,color: Colors.grey),),
+                  Text(
+                    TextHelp.tex,
+                    style: GoogleFonts.montserrat(
+                        fontSize: 13, color: Colors.grey),
+                  ),
+                  const SizedBox(height: 15),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  const BodyItem(),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const TagItem(),
+                  const SizedBox(height: 20,),
+                  const Divider(),
+                  const SizedBox(height: 20,),
+                const  ButtomItem()
 
                 ],
               ),

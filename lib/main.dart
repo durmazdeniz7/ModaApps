@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:moda_apps/widgets/main_page.dart';
+import 'package:moda_apps/pages/main_page.dart';
 
 void main()=>runApp(const ModaApp());
 
